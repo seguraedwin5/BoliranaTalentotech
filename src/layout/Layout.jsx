@@ -3,7 +3,7 @@ function Layout() {
   return (
     <div>
       <header>
-        <h1>Layout Inicial</h1>
+        <h1 className="text-3xl font-bold underline">Layout Inicial</h1>
       </header>
 
       <main>

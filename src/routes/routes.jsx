@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import { Alquiler, Campeonatos, Eventos } from "../pages/index";
+import { Alquiler, Campeonatos, Eventos } from "../pages";
 export const routes = createBrowserRouter([
   {
     path: "/",
