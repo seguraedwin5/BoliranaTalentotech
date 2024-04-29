@@ -1,9 +1,10 @@
 function Hero() {
   return (
-    <div>
-      <div className="banner absolute w-full h-full bg-[url('/public/rana_banner.jpeg')] bg-no-repeat bg-contain "></div>
-      <div className="relative text-center ">
-        <h2 className="text-white">Bienvenido</h2>
+    <div className="relative h-screen w-auto bg-hero-image mt-2 ">
+      <div className="absolute inset-0 flex items-center justify-center rounded">
+        <h1 className="text-white text-4xl font-bold">
+          Bienvenido a Bolirana Talento Tech
+        </h1>
       </div>
     </div>
   );

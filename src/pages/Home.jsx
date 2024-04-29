@@ -3,11 +3,10 @@ import Hero from "../components/Hero";
 function Home() {
   return (
     <div>
+      <Hero></Hero>
+
       <Section>
-        <h1 className="hover:text-blue-300">Home Working fine!</h1>
-      </Section>
-      <Section>
-        <Hero></Hero>
+        <p>Este es un texto de seccion</p>
       </Section>
     </div>
   );
