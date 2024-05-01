@@ -2,7 +2,7 @@ import logo_bolirana from "../assets/alquiler_bolirana.jpg";
 import eventos_bolirana from "../assets/eventos_bolirana.jpg";
 import alquiler_bolirana from "../assets/alquiler_bolirana.jpg";
 import "../App.css";
-import styles from "./styles/sectioncards.module.css";
+import { Link } from "react-router-dom";
 
 function SectionCards() {
   return (
@@ -32,7 +32,9 @@ function SectionCards() {
                 servicios. Déjanos encargarnos de todo para que tú solo
                 disfrutes.
               </p>
-              <button>View more...</button>
+              <Link to={"/eventos"}>
+                <button>View more...</button>
+              </Link>
             </article>
             <article>
               <img src={logo_bolirana} alt="" />
@@ -42,7 +44,9 @@ function SectionCards() {
                 campeonatos. Con premios y reconocimientos, cada victoria será
                 un logro inolvidable.
               </p>
-              <button>View more...</button>
+              <Link to={"/campeonatos"}>
+                <button>View more...</button>
+              </Link>
             </article>
             <article>
               <img src={alquiler_bolirana} alt="" />
@@ -51,7 +55,9 @@ function SectionCards() {
                 Obtén lo mejor en equipos de alquiler para tu evento. Calidad y
                 variedad para satisfacer todas tus necesidades.
               </p>
-              <button>View more...</button>
+              <Link to={"/alquiler"}>
+                <button>View more...</button>
+              </Link>
             </article>
           </section>
         </main>
