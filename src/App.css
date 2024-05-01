@@ -1,10 +1,11 @@
 .bg-hero-image{
   background-image: url('/public/rana_banner.jpeg');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: 25%, 75%;
+  background-repeat: repeat-x;
   position: relative;
   border-radius: 5%;
+  height: 75vh;
 }
 .bg-hero-image::before {
   content: '';
