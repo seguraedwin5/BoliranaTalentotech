@@ -11,7 +11,9 @@ function Layout() {
       <main className="container mx-auto px-4">
         <Outlet />
       </main>
-      <footer></footer>
+      <footer>
+        
+      </footer>
     </div>
   );
 }
