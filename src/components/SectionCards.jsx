@@ -1,11 +1,14 @@
-import logo_bolirana from '../assets/alquiler_bolirana'
-import eventos_bolirana from '../assets/eventos_bolirana.jpg'
-import alquiler_bolirana from '../assets/alquiler_bolirana.jpg'
-import './App.css';
+import logo_bolirana from "../assets/alquiler_bolirana.jpg";
+import eventos_bolirana from "../assets/eventos_bolirana.jpg";
+import alquiler_bolirana from "../assets/alquiler_bolirana.jpg";
+import "../App.css";
+import styles from "./styles/sectioncards.module.css";
+
 function SectionCards() {
-    return (
-      <div className="App">
-        {/* <header className="App-header">
+  return (
+    <div className="App">
+      {
+        /* <header className="App-header">
           <img src = {logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -20,38 +23,40 @@ function SectionCards() {
           </a>
         </header> */
         <main>
-        <section className="second__section">
-        <article>
-          <img src={eventos_bolirana} alt="" />
-          <h2>Eventos</h2>
-          <p>
-            Haz que tu evento sea inolvidable con nuestra amplia gama de
-            servicios. Déjanos encargarnos de todo para que tú solo disfrutes.
-          </p>
-          <button>View more...</button>
-        </article>
-        <article>
-          <img src={logo_bolirana} alt="" />
-          <h2>Campeonatos</h2>
-          <p>
-            Descubre nuevos desafíos y enfrenta a los mejores en nuestros
-            campeonatos. Con premios y reconocimientos, cada victoria será un
-            logro inolvidable.
-          </p>
-          <button>View more...</button>
-        </article>
-        <article>
-          <img src={alquiler_bolirana} alt="" />
-          <h2>Reservas</h2>
-          <p>
-            Obtén lo mejor en equipos de alquiler para tu evento. Calidad y
-            variedad para satisfacer todas tus necesidades.
-          </p>
-          <button>View more...</button>
-        </article>
-      </section>
-      </main>}
-      </div>
-    );
-  }
-  export default SectionCards;
+          <section className="second__section">
+            <article>
+              <img src={eventos_bolirana} alt="" />
+              <h2>Eventos</h2>
+              <p>
+                Haz que tu evento sea inolvidable con nuestra amplia gama de
+                servicios. Déjanos encargarnos de todo para que tú solo
+                disfrutes.
+              </p>
+              <button>View more...</button>
+            </article>
+            <article>
+              <img src={logo_bolirana} alt="" />
+              <h2>Campeonatos</h2>
+              <p>
+                Descubre nuevos desafíos y enfrenta a los mejores en nuestros
+                campeonatos. Con premios y reconocimientos, cada victoria será
+                un logro inolvidable.
+              </p>
+              <button>View more...</button>
+            </article>
+            <article>
+              <img src={alquiler_bolirana} alt="" />
+              <h2>Reservas</h2>
+              <p>
+                Obtén lo mejor en equipos de alquiler para tu evento. Calidad y
+                variedad para satisfacer todas tus necesidades.
+              </p>
+              <button>View more...</button>
+            </article>
+          </section>
+        </main>
+      }
+    </div>
+  );
+}
+export default SectionCards;
