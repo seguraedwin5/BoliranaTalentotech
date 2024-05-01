@@ -25,8 +25,8 @@ function SectionCards() {
           <img src={eventos_bolirana} alt="" />
           <h2>Eventos</h2>
           <p>
-            "Haz que tu evento sea inolvidable con nuestra amplia gama de
-            servicios. Déjanos encargarnos de todo para que tú solo disfrutes."
+            Haz que tu evento sea inolvidable con nuestra amplia gama de
+            servicios. Déjanos encargarnos de todo para que tú solo disfrutes.
           </p>
           <button>View more...</button>
         </article>
@@ -34,9 +34,9 @@ function SectionCards() {
           <img src={logo_bolirana} alt="" />
           <h2>Campeonatos</h2>
           <p>
-            "Descubre nuevos desafíos y enfrenta a los mejores en nuestros
+            Descubre nuevos desafíos y enfrenta a los mejores en nuestros
             campeonatos. Con premios y reconocimientos, cada victoria será un
-            logro inolvidable."
+            logro inolvidable.
           </p>
           <button>View more...</button>
         </article>
@@ -44,8 +44,8 @@ function SectionCards() {
           <img src={alquiler_bolirana} alt="" />
           <h2>Reservas</h2>
           <p>
-            "Obtén lo mejor en equipos de alquiler para tu evento. Calidad y
-            variedad para satisfacer todas tus necesidades."
+            Obtén lo mejor en equipos de alquiler para tu evento. Calidad y
+            variedad para satisfacer todas tus necesidades.
           </p>
           <button>View more...</button>
         </article>
