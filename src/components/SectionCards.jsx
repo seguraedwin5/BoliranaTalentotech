@@ -1,4 +1,4 @@
-import logo_bolirana from "../assets/alquiler_bolirana.jpg";
+import logo_bolirana from "../assets/logo_bolirana.jpg";
 import eventos_bolirana from "../assets/eventos_bolirana.jpg";
 import alquiler_bolirana from "../assets/alquiler_bolirana.jpg";
 import "../App.css";
