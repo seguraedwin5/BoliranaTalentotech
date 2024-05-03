@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-04-27T00:57:47.485Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.4.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="JKT5NHggcablu8xhSHQG" version="21.4.0" type="device" pages="7">
+<mxfile host="Electron" modified="2024-05-03T01:33:57.553Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.4.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="oroqHMwczEO31QydP54m" version="21.4.0" type="device" pages="7">
   <diagram name="Principal" id="B3XIoygkwMJHDmE57EDm">
     <mxGraphModel dx="1416" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -268,6 +268,9 @@
             <mxPoint x="-280" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="crXSGsomIv6dguo4cvnn-3" value="Registrarse" style="rounded=1;fillColor=#0057D8;strokeColor=none;html=1;whiteSpace=wrap;fontColor=#ffffff;align=center;verticalAlign=middle;fontStyle=0;fontSize=12;sketch=0;" vertex="1" parent="EShRvVfBC4i5VTwlrNt5-3">
+          <mxGeometry x="401" y="180" width="86" height="33" as="geometry" />
+        </mxCell>
         <mxCell id="EShRvVfBC4i5VTwlrNt5-9" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Campeonatos Parejas&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px&quot; color=&quot;#999999&quot;&gt;Last udated 3 mind ago&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=top;align=left;spacing=20;fontSize=14;spacingLeft=170;" parent="1" vertex="1">
           <mxGeometry x="340" y="560" width="520" height="240" as="geometry" />
         </mxCell>
@@ -276,6 +279,9 @@
             <mxPoint x="-280" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="crXSGsomIv6dguo4cvnn-2" value="Registrarse" style="rounded=1;fillColor=#0057D8;strokeColor=none;html=1;whiteSpace=wrap;fontColor=#ffffff;align=center;verticalAlign=middle;fontStyle=0;fontSize=12;sketch=0;" vertex="1" parent="EShRvVfBC4i5VTwlrNt5-9">
+          <mxGeometry x="401" y="180" width="86" height="33" as="geometry" />
+        </mxCell>
         <mxCell id="EShRvVfBC4i5VTwlrNt5-11" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;Campeonatos Grupo&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px&quot; color=&quot;#999999&quot;&gt;Last udated 3 mind ago&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#ffffff;fontColor=#000000;verticalAlign=top;align=left;spacing=20;fontSize=14;spacingLeft=170;" parent="1" vertex="1">
           <mxGeometry x="340" y="820" width="520" height="240" as="geometry" />
         </mxCell>
@@ -283,6 +289,9 @@
           <mxGeometry width="280" height="240" relative="1" as="geometry">
             <mxPoint x="-280" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="crXSGsomIv6dguo4cvnn-1" value="Registrarse" style="rounded=1;fillColor=#0057D8;strokeColor=none;html=1;whiteSpace=wrap;fontColor=#ffffff;align=center;verticalAlign=middle;fontStyle=0;fontSize=12;sketch=0;" vertex="1" parent="EShRvVfBC4i5VTwlrNt5-11">
+          <mxGeometry x="401" y="180" width="86" height="33" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
