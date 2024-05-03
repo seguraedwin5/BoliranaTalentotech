@@ -5,15 +5,12 @@ function Layout() {
     <div>
       <header>
         <Navbar></Navbar>
-        <h1 className="text-3xl font-bold underline">Layout Inicial</h1>
       </header>
 
       <main className="container mx-auto px-4">
         <Outlet />
       </main>
-      <footer>
-        
-      </footer>
+      <footer></footer>
     </div>
   );
 }
