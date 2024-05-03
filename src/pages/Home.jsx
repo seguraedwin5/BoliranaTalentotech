@@ -5,10 +5,6 @@ function Home() {
   return (
     <div>
       <Hero></Hero>
-
-      <Section>
-        <p>Este es un texto de seccion</p>
-      </Section>
       <SectionCards></SectionCards>
     </div>
   );

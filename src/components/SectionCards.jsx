@@ -22,8 +22,11 @@ function SectionCards() {
             Learn React
           </a>
         </header> */
-        <main>
-          <section className="second__section">
+        <main id="section-cards" className=" p-3">
+          <h1 className="text-5xl text-center font-bold mt-2 mb-2">
+            Servicios
+          </h1>
+          <section className="second__section ">
             <article>
               <img src={eventos_bolirana} alt="" />
               <h2>Eventos</h2>
