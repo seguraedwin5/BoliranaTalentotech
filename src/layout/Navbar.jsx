@@ -20,7 +20,12 @@ function NavbarComponent() {
         </span>
       </Brand>
       <div className="flex md:order-2">
-        <h4>Login</h4>
+        <div className="bg-cyan-500 p-2 mx-1 rounded text-white hover:bg-cyan-700">
+        <h4><Link to='/login'>Login</Link></h4>
+        </div>
+        <div className="bg-teal-500 p-2 mx-1 rounded text-white hover:bg-teal-700">
+        <h4><Link to='/registro'>Registro</Link></h4>
+        </div>
       </div>
 
       <Navbar.Collapse>
