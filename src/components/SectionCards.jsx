@@ -23,7 +23,7 @@ function SectionCards() {
           </a>
         </header> */
         <main id="section-cards" className=" p-3">
-          <h1 className="text-5xl text-center font-bold mt-2 mb-2">
+          <h1 className="text-5xl text-center font-bold mt-2 mb-2 ">
             Servicios
           </h1>
           <section className="second__section ">

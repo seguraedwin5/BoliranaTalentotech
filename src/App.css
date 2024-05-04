@@ -1,11 +1,13 @@
 .bg-hero-image{
   background-image: url('/public/rana_banner.jpeg');
+  background-position: center;
   background-size: cover;
-  background-position: 25%, 75%;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   position: relative;
   border-radius: 5%;
-  height: 75vh;
+  height: 100vh;
+  
+  
 }
 .bg-hero-image::before {
   content: '';
@@ -22,7 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: Platypi sans-serif;
 }
 header{
   height: 20vh;
@@ -89,4 +91,12 @@ main .second__section article button:hover{
   margin-top: 30px;
   border-radius: 10px;
   box-shadow: 10px 5px 15px black inset;
+}
+
+.shadowtext{
+  text-shadow: 6px 6px 10px black;
+}
+
+hr{
+  margin: 20px;
 }
