@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import { Alquiler, Campeonatos, Eventos, Home } from "../pages";
+import { Alquiler, Campeonatos, Eventos, Home, Login, Registro,Contacto,AcercaDe } from "../pages";
 export const routes = createBrowserRouter([
   {
     path: "/",
@@ -10,6 +10,10 @@ export const routes = createBrowserRouter([
       { path: "/campeonatos", element: <Campeonatos /> },
       { path: "/eventos", element: <Eventos /> },
       { path: "/alquiler", element: <Alquiler /> },
+      { path: "/login", element: <Login /> },
+      { path: "/registro", element: <Registro /> },
+      { path: "/contacto", element: <Contacto /> },
+      { path: "/acercade", element: <AcercaDe /> },
     ],
   },
 ]);
