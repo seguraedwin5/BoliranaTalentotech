@@ -1,9 +1,9 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 py-8">
+    <footer className="bg-gray-100 py-8 mt-5 ">
       <div className="container mx-auto flex flex-col items-center">
         <div className="text-gray-800 text-sm: 2xl mb-4 text-2xl">
           © 2024 Bolirana talento tech. Todos los derechos reservados.
