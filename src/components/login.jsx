@@ -1,5 +1,6 @@
 import logo from '../assets/logo_bolirana.jpg'
 import login_google from '../assets/login_google.jpg'
+import '../App.css';
 
 
 export const Login = () => (
