@@ -27,15 +27,10 @@ function Registro() {
     e.preventDefault();
     // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
     console.log(formData);
-    /*
-    axios
-      .post("http://localhost:3000/Users", formData)
-      .then((res) => {
-        res.status;
-      })
-      .then((status) => {
-        status === 200 ? alert("creado") : alert("no creado");
-      });*/
+
+    axios.post("http://localhost:8083/rest/users/register", {}).then((res) => {
+      alert(res.data);
+    });
   };
 
   return (
