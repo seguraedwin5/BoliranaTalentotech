@@ -25,19 +25,16 @@ function Registro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
     console.log(formData);
-    /*
     axios
-      .post("http://localhost:3000/Users", formData)
+      .post("http://localhost:8083/api/register", formData)
       .then((res) => {
         res.status;
       })
       .then((status) => {
         status === 200 ? alert("creado") : alert("no creado");
-      });*/
+      });
   };
-
   return (
     <Section>
       <div className="">
@@ -106,37 +103,7 @@ function Registro() {
             />
           </div>
           <div className=" flex w-5/12 items-center justify-around">
-            <label htmlFor="address">Dirección:</label>
-            <br></br>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-            />
-          </div>
-          <div className=" flex w-5/12 items-center justify-around">
-            <label htmlFor="city">Ciudad:</label>
-            <br></br>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              value={formData.city}
-              onChange={handleChange}
-            />
-          </div>
-          <div className=" flex w-5/12 items-center justify-around">
-            <label htmlFor="country">País:</label>
-            <br></br>
-            <input
-              type="text"
-              id="country"
-              name="country"
-              value={formData.country}
-              onChange={handleChange}
-            />
+            <span></span>
           </div>
           <div className=" flex w-5/12 items-center justify-around">
             <label htmlFor="termsAccepted">
@@ -151,22 +118,23 @@ function Registro() {
               Acepto los términos y condiciones
             </label>
           </div>
+          <div className=" flex w-5/12 items-center justify-around">
           <button
             type="submit"
             className="
-    bg-blue-500
-    hover:bg-blue-700
-    text-white
-    font-bold
-    py-2
-    px-4
-    rounded
-    transition-colors
-    duration-300
-  "
-          >
-            Registrarse
+              bg-blue-500
+              hover:bg-blue-700
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+              transition-colors
+              duration-300
+              "
+          >Registrarse
           </button>
+          </div>
         </form>
       </div>
     </Section>
