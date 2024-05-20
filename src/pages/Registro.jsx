@@ -6,13 +6,8 @@ function Registro() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: "",
-    confirmPassword: "",
     phone: "",
-    address: "",
-    city: "",
-    country: "",
-    termsAccepted: false,
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -29,10 +24,10 @@ function Registro() {
     axios
       .post("http://localhost:8083/api/users/register", formData)
       .then((res) => {
-        res.status;
+        return res.data;
       })
-      .then((status) => {
-        status === 200 ? alert("creado") : alert("no creado");
+      .then((data) => {
+        alert(data);
       });
   };
   return (
@@ -111,8 +106,6 @@ function Registro() {
                 type="checkbox"
                 id="termsAccepted"
                 name="termsAccepted"
-                checked={formData.termsAccepted}
-                onChange={handleChange}
                 required
               />
               Acepto los términos y condiciones
