@@ -22,10 +22,10 @@ function Login() {
     axios
       .post("http://localhost:8083/api/users/login", formData)
       .then((res) => {
-        res.status;
+        return res.data;
       })
-      .then((status) => {
-        status === 200 ? console.log("login ok") : console.log("Error");
+      .then((data) => {
+        console.log(data);
       });
   };
 

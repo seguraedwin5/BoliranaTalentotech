@@ -27,7 +27,7 @@ function Registro() {
         return res.data;
       })
       .then((data) => {
-        alert(data);
+        alert("usuario creado con id #: " + data);
       });
   };
   return (
@@ -81,8 +81,6 @@ function Registro() {
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
               required
             />
           </div>
