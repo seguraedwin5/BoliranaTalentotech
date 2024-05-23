@@ -1,8 +1,10 @@
 import Input from "../components/Input";
 import Section from "../components/Section";
-import React, { Children, useState } from "react";
+import React, { Children, useContext, useState } from "react";
 import axios from "axios";
+import { SesionDataContext } from "../../Context";
 function Login() {
+  const [sessiondata, Setsessiondata] = useContext(SesionDataContext);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -25,8 +27,9 @@ function Login() {
         return res.data;
       })
       .then((data) => {
-        console.log(data);
-      });
+        Setsessiondata((session) => ({ ...data }));
+      })
+      .finally(console.log(sessiondata));
   };
 
   return (
