@@ -7,19 +7,21 @@ const { Item } = Dropdown;
 function NavbarComponent() {
   return (
     <Navbar className="bg-gray-100 py-8">
-      <Link
-        to={"/"}
-        className="text-gray-600 font-bold mr-4 mb-4 md:mb-0 text-3xl block"
-      >
-        <div className="flex flex-row justify-center items-center">
-          <img
-            src="/public/logo.png"
-            className="mr-5 ml-5 h-16 w-16 sm:h-24 sm:w-24"
-            alt="Logo"
-          />
-          <h2>Bolirana</h2>
-        </div>
-      </Link>
+      <Navbar.Link>
+        <Link
+          to={"/"}
+          className="text-gray-600 font-bold mr-4 mb-4 md:mb-0 text-3xl block"
+        >
+          <div className="flex flex-row justify-center items-center">
+            <img
+              src="/public/logo.png"
+              className="mr-5 ml-5 h-16 w-16 sm:h-24 sm:w-24"
+              alt="Logo"
+            />
+            <h2>Bolirana</h2>
+          </div>
+        </Link>
+      </Navbar.Link>
       <Navbar.Collapse>
         <Navbar.Link>
           <Link to="/" className="text-2xl">
