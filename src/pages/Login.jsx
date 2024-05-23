@@ -1,18 +1,13 @@
 import Input from "../components/Input";
 import Section from "../components/Section";
-import React, { Children, useState } from "react";
+import React, { Children, useContext, useState } from "react";
 import axios from "axios";
+import { SesionDataContext } from "../../Context";
 function Login() {
+  const [sessiondata, Setsessiondata] = useContext(SesionDataContext);
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     password: "",
-    confirmPassword: "",
-    phone: "",
-    address: "",
-    city: "",
-    country: "",
-    termsAccepted: false,
   });
 
   const handleChange = (e) => {
@@ -27,13 +22,14 @@ function Login() {
     e.preventDefault();
     console.log(formData);
     axios
-      .post("http://localhost:8083/api/users", formData)
+      .post("http://localhost:8083/api/users/login", formData)
       .then((res) => {
-        res.status;
+        return res.data;
       })
-      .then((status) => {
-        status === 200 ? console.log('login ok') : console.log('Error');;
-      });
+      .then((data) => {
+        Setsessiondata((session) => ({ ...data }));
+      })
+      .finally(console.log(sessiondata));
   };
 
   return (
@@ -68,11 +64,11 @@ function Login() {
               required
             />
           </div>
-          
+
           <div className=" flex w-5/12 items-center justify-around">
             <button
-            type="submit"
-            className="
+              type="submit"
+              className="
             bg-blue-500
             hover:bg-blue-700
             text-white
@@ -83,9 +79,9 @@ function Login() {
             transition-colors
             duration-300
           "
-          >
-            Entrar
-          </button>
+            >
+              Entrar
+            </button>
           </div>
         </form>
       </div>

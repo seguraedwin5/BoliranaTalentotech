@@ -6,13 +6,8 @@ function Registro() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: "",
-    confirmPassword: "",
     phone: "",
-    address: "",
-    city: "",
-    country: "",
-    termsAccepted: false,
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -27,12 +22,12 @@ function Registro() {
     e.preventDefault();
     console.log(formData);
     axios
-      .post("http://localhost:8083/api/register", formData)
+      .post("http://localhost:8083/api/users/register", formData)
       .then((res) => {
-        res.status;
+        return res.data;
       })
-      .then((status) => {
-        status === 200 ? alert("creado") : alert("no creado");
+      .then((data) => {
+        alert("usuario creado con id #: " + data);
       });
   };
   return (
@@ -86,8 +81,6 @@ function Registro() {
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
               required
             />
           </div>
@@ -111,17 +104,15 @@ function Registro() {
                 type="checkbox"
                 id="termsAccepted"
                 name="termsAccepted"
-                checked={formData.termsAccepted}
-                onChange={handleChange}
                 required
               />
               Acepto los términos y condiciones
             </label>
           </div>
           <div className=" flex w-5/12 items-center justify-around">
-          <button
-            type="submit"
-            className="
+            <button
+              type="submit"
+              className="
               bg-blue-500
               hover:bg-blue-700
               text-white
@@ -132,8 +123,9 @@ function Registro() {
               transition-colors
               duration-300
               "
-          >Registrarse
-          </button>
+            >
+              Registrarse
+            </button>
           </div>
         </form>
       </div>
