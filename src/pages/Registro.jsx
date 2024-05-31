@@ -28,6 +28,7 @@ function Registro() {
       })
       .then((data) => {
         alert("usuario creado con id #: " + data);
+        form.reset();
       });
   };
   return (

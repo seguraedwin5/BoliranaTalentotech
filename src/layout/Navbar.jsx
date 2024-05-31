@@ -12,7 +12,7 @@ function NavbarComponent() {
   const navigate = useNavigate();
   function handleLogout() {
     Setsessiondata({ data: null });
-    navigate("/");
+    navigate("/registro");
   }
   if (sessiondata.data != null) {
     return (
