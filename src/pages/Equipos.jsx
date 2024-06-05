@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const handleEliminarEquipo = async (equipoId) => {
+  try {
+    console.log(equipoId);
+    await axios.delete(`http://localhost:8083/api/equipos/${equipoId}`);
+    fetchEquipos(); // Actualizar la lista de equipos después de eliminar
+  } catch (error) {
+    console.error("Error al eliminar el equipo:", error);
+  }
+};
+
 const Equipos = () => {
   const [equipos, setEquipos] = useState([]);
   const [nuevoEquipo, setNuevoEquipo] = useState({
@@ -14,7 +24,7 @@ const Equipos = () => {
 
   const fetchEquipos = async () => {
     try {
-      const response = await axios.get("/equipos");
+      const response = await axios.get("http://localhost:8083/api/equipos");
       setEquipos(response.data);
     } catch (error) {
       console.error("Error al obtener los equipos:", error);
@@ -31,7 +41,7 @@ const Equipos = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/equipos", nuevoEquipo);
+      await axios.post("http://localhost:8083/api/equipos", nuevoEquipo);
       setNuevoEquipo({
         nombre: "",
         ubicacion: "",
@@ -44,7 +54,7 @@ const Equipos = () => {
 
   return (
     <div>
-      <h2>Equipos</h2>
+      <h2 className="text-center">Equipos</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>
@@ -56,8 +66,6 @@ const Equipos = () => {
               onChange={handleInputChange}
             />
           </label>
-        </div>
-        <div>
           <label>
             Ubicación:
             <input
@@ -67,14 +75,26 @@ const Equipos = () => {
               onChange={handleInputChange}
             />
           </label>
+          <button
+            type="submit"
+            className="cursor-pointer shadow-smbg-cyan-500 p-2 mx-1 rounded text-black hover:bg-green-700 bg-green-100"
+          >
+            Crear Equipo
+          </button>
         </div>
-        <button type="submit">Crear Equipo</button>
       </form>
-      <h3>Lista de Equipos</h3>
+      <h2>Lista de Equipos</h2>
       <ul>
         {equipos.map((equipo) => (
-          <li key={equipo._id}>
-            Nombre: {equipo.nombre}, Ubicación: {equipo.ubicacion}
+          <li key={equipo._id} className="list-disc">
+            ID: {equipo._id}, Nombre: <strong>{equipo.nombre}</strong>,
+            Ubicación: <strong>{equipo.ubicacion}</strong>
+            <button
+              className="cursor-pointer shadow-smbg-cyan-500 p-2 mx-1 rounded text-black hover:bg-red-700 bg-red-100"
+              onClick={() => handleEliminarEquipo(equipo._id)}
+            >
+              Eliminar
+            </button>
           </li>
         ))}
       </ul>

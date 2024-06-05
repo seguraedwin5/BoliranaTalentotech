@@ -44,6 +44,11 @@ function NavbarComponent() {
               Combos
             </Link>
           </Navbar.Link>
+          <Navbar.Link>
+            <Link to="/equipos" className="text-2xl">
+              Equipos
+            </Link>
+          </Navbar.Link>
           <Dropdown
             arrowIcon={true}
             inline
