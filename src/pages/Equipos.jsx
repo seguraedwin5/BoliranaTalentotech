@@ -86,11 +86,12 @@ const Equipos = () => {
       <h2>Lista de Equipos</h2>
       <ul>
         {equipos.map((equipo) => (
-          <li key={equipo._id} className="list-disc">
-            ID: {equipo._id}, Nombre: <strong>{equipo.nombre}</strong>,
-            Ubicación: <strong>{equipo.ubicacion}</strong>
+          <li key={equipo?._id?.toString() || ""}>
+            ID: {equipo?._id?.toString() || "hola"}, Nombre:{" "}
+            <strong>{equipo.nombre}</strong>, Ubicación:{" "}
+            <strong>{equipo.ubicacion}</strong>
             <button
-              className="cursor-pointer shadow-smbg-cyan-500 p-2 mx-1 rounded text-black hover:bg-red-700 bg-red-100"
+              className="cursor-pointer shadow-smbg-cyan-500 p-1 mx-1 rounded text-black hover:bg-red-700 bg-red-100"
               onClick={() => handleEliminarEquipo(equipo._id)}
             >
               Eliminar

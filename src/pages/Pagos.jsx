@@ -15,7 +15,7 @@ const Pagos = () => {
 
   const fetchPagos = async () => {
     try {
-      const response = await axios.get("/pagos");
+      const response = await axios.get("http://localhost:8083/api/pagos");
       setPagos(response.data);
     } catch (error) {
       console.error("Error al obtener los pagos:", error);
@@ -31,9 +31,14 @@ const Pagos = () => {
   };
 
   const handleSubmit = async (e) => {
+    // Validar si el campo "valor" está vacío
+    if (!nuevoPago.valor) {
+      alert("Por favor, ingrese un valor para el pago.");
+      return; // Salir de la función si el campo "valor" está vacío
+    }
     e.preventDefault();
     try {
-      await axios.post("/pagos", nuevoPago);
+      await axios.post("http://localhost:8083/api/pagos", nuevoPago);
       setNuevoPago({
         bolirana: false,
         valor: 0,
@@ -47,7 +52,7 @@ const Pagos = () => {
 
   return (
     <div>
-      <h2>Pagos</h2>
+      <h2 className="text-center">Pagos</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>
@@ -59,8 +64,6 @@ const Pagos = () => {
               onChange={handleInputChange}
             />
           </label>
-        </div>
-        <div>
           <label>
             Valor:
             <input
@@ -70,26 +73,36 @@ const Pagos = () => {
               onChange={handleInputChange}
             />
           </label>
-        </div>
-        <div>
           <label>
-            Tipo de pago:
-            <input
-              type="text"
+            Tipo de Pago:
+            <select
               name="tipo_pago"
               value={nuevoPago.tipo_pago}
               onChange={handleInputChange}
-            />
-          </label>
+            >
+              <option value="">Seleccione un tipo de pago</option>
+              {["Efectivo", "Tarjeta", "Transferencia"].map((opcion) => (
+                <option key={opcion} value={opcion}>
+                  {opcion}
+                </option>
+              ))}
+            </select>
+          </label>{" "}
+          <button
+            type="submit"
+            className="cursor-pointer shadow-smbg-cyan-500 p-2 mx-1 rounded text-black hover:bg-green-700 bg-green-100"
+          >
+            Crear Pago
+          </button>
         </div>
-        <button type="submit">Crear Pago</button>
       </form>
       <h3>Lista de Pagos</h3>
       <ul>
         {pagos.map((pago) => (
           <li key={pago._id}>
-            Bolirana: {pago.bolirana ? "Sí" : "No"}, Valor: {pago.valor}, Tipo
-            de pago: {pago.tipo_pago}
+            Bolirana: <strong>{pago.bolirana ? "Sí" : "No"}</strong>, Valor:{" "}
+            <strong>{pago.valor}</strong>, Tipo de pago:{" "}
+            <strong>{pago.tipo_pago}</strong>
           </li>
         ))}
       </ul>
