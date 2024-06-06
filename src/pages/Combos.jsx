@@ -6,6 +6,12 @@ function Combos() {
   const [combos, setCombos] = useState([]);
 
   useEffect(() => {
+    /*
+        const response = await axios.get("localhost:8083/api/pagos").then((data) => {setCombos(data)})
+
+        
+      */
+
     let newcombos = [
       {
         nombre: "Combo 1",
