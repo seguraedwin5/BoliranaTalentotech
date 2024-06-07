@@ -3,6 +3,8 @@ import Section from "../components/Section";
 import React, { Children, useContext, useState } from "react";
 import axios from "axios";
 import { SesionDataContext } from "../../Context";
+
+const url = import.meta.env.VITE_API_URL;
 function Login() {
   const [sessiondata, Setsessiondata] = useContext(SesionDataContext);
   const [formData, setFormData] = useState({
@@ -22,7 +24,7 @@ function Login() {
     e.preventDefault();
     console.log(formData);
     axios
-      .post("http://localhost:8083/api/users/login", formData)
+      .post(url + "/users/login", formData)
       .then((res) => {
         return res.data;
       })
