@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const handleEliminarEquipo = async (equipoId) => {
-  try {
-    console.log(equipoId);
-    await axios.delete(`http://localhost:8083/api/equipos/${equipoId}`);
-    fetchEquipos(); // Actualizar la lista de equipos después de eliminar
-  } catch (error) {
-    console.error("Error al eliminar el equipo:", error);
-  }
-};
-
 const Equipos = () => {
   const [equipos, setEquipos] = useState([]);
   const [nuevoEquipo, setNuevoEquipo] = useState({
@@ -46,9 +36,20 @@ const Equipos = () => {
         nombre: "",
         ubicacion: "",
       });
-      fetchEquipos();
+      console.log("se creo el equipo con exito");
+      fetchEquipos(); /* listamos los equipos */
     } catch (error) {
       console.error("Error al crear el equipo:", error);
+    }
+  };
+
+  const handleEliminarEquipo = async (equipoId) => {
+    try {
+      console.log(equipoId);
+      await axios.delete(`http://localhost:8083/api/equipos/${equipoId}`);
+      fetchEquipos(); // Actualizar la lista de equipos después de eliminar
+    } catch (error) {
+      console.error("Error al eliminar el equipo:", error);
     }
   };
 
@@ -87,7 +88,7 @@ const Equipos = () => {
       <ul>
         {equipos.map((equipo) => (
           <li key={equipo?._id?.toString() || ""}>
-            ID: {equipo?._id?.toString() || "hola"}, Nombre:{" "}
+            ID: '{equipo?._id?.toString()}', Nombre:{" "}
             <strong>{equipo.nombre}</strong>, Ubicación:{" "}
             <strong>{equipo.ubicacion}</strong>
             <button
