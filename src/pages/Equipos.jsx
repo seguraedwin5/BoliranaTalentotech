@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const url = import.meta.env.VITE_API_URL;
 const Equipos = () => {
   const [equipos, setEquipos] = useState([]);
   const [nuevoEquipo, setNuevoEquipo] = useState({
@@ -14,7 +15,7 @@ const Equipos = () => {
 
   const fetchEquipos = async () => {
     try {
-      const response = await axios.get("http://localhost:8083/api/equipos");
+      const response = await axios.get(url + "/equipos");
       setEquipos(response.data);
     } catch (error) {
       console.error("Error al obtener los equipos:", error);
@@ -31,7 +32,7 @@ const Equipos = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8083/api/equipos", nuevoEquipo);
+      await axios.post(url + "/equipos", nuevoEquipo);
       setNuevoEquipo({
         nombre: "",
         ubicacion: "",
@@ -46,7 +47,7 @@ const Equipos = () => {
   const handleEliminarEquipo = async (equipoId) => {
     try {
       console.log(equipoId);
-      await axios.delete(`http://localhost:8083/api/equipos/${equipoId}`);
+      await axios.delete(url + `/equipos/${equipoId}`);
       fetchEquipos(); // Actualizar la lista de equipos después de eliminar
     } catch (error) {
       console.error("Error al eliminar el equipo:", error);
