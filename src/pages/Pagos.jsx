@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+const url = import.meta.env.VITE_API_URL;
 const Pagos = () => {
   const [pagos, setPagos] = useState([]);
   const [nuevoPago, setNuevoPago] = useState({
@@ -15,7 +15,7 @@ const Pagos = () => {
 
   const fetchPagos = async () => {
     try {
-      const response = await axios.get("http://localhost:8083/api/pagos");
+      const response = await axios.get(url + "/pagos");
       setPagos(response.data);
     } catch (error) {
       console.error("Error al obtener los pagos:", error);
@@ -38,7 +38,7 @@ const Pagos = () => {
     }
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8083/api/pagos", nuevoPago);
+      await axios.post(url + "/pagos", nuevoPago);
       setNuevoPago({
         bolirana: false,
         valor: 0,

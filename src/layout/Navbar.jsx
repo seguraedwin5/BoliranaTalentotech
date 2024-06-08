@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { SesionDataContext } from "../../Context";
 import { data } from "autoprefixer";
+import logo from "../assets/logo.png";
 
 const { Brand } = Navbar;
 const { Item } = Dropdown;
@@ -21,7 +22,7 @@ function NavbarComponent() {
         <Navbar.Brand as={Link}>
           <div className="flex flex-row justify-center items-center">
             <img
-              src="/public/logo.png"
+              src={logo}
               className="mr-5 ml-5 h-16 w-16 sm:h-24 sm:w-24"
               alt="Logo"
             />
