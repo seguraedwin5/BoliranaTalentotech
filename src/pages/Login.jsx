@@ -3,7 +3,7 @@ import Section from "../components/Section";
 import React, { Children, useContext, useState } from "react";
 import axios from "axios";
 import { SesionDataContext } from "../../Context";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 const url = import.meta.env.VITE_API_URL;
 function Login() {
   const [sessiondata, Setsessiondata] = useContext(SesionDataContext);
@@ -30,8 +30,10 @@ function Login() {
     axios
       .post(url + "/users/login", formData)
       .then((res) => {
-        Setsessiondata((session) => ({ ...res.data }));
+        console.log(res.data);
+        Setsessiondata({ ...res.data });
         console.log("Inicio de sesión exitoso");
+        console.log("sesion data:" + JSON.stringify(sessiondata));
         navigate("/"); // Redirigir a la página principal
       })
       .catch((error) => {

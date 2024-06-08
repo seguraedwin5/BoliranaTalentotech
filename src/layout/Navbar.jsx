@@ -1,6 +1,6 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { SesionDataContext } from "../../Context";
 import { data } from "autoprefixer";
 
@@ -10,11 +10,12 @@ const { Item } = Dropdown;
 function NavbarComponent() {
   const [sessiondata, Setsessiondata] = useContext(SesionDataContext);
   const navigate = useNavigate();
+
   function handleLogout() {
     Setsessiondata({ data: null });
     navigate("/");
   }
-  if (sessiondata.data != null) {
+  if (sessiondata.email != null) {
     return (
       <Navbar className="bg-gray-100 py-8">
         <Navbar.Brand as={Link}>
