@@ -3,6 +3,8 @@ import App from "../App";
 import {
   Alquiler,
   Campeonatos,
+  Equipos,
+  Pagos,
   Eventos,
   Home,
   Login,
@@ -23,6 +25,8 @@ export const routes = createBrowserRouter([
       { path: "/registro", element: <Registro /> },
       { path: "/combos", element: <Combos /> },
       { path: "/acercade", element: <AcercaDe /> },
+      { path: "/equipos", element: <Equipos /> },
+      { path: "/pagos", element: <Pagos /> },
     ],
   },
 ]);

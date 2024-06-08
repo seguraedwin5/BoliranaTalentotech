@@ -27,7 +27,6 @@ function NavbarComponent() {
             <h2>Bolirana</h2>
           </div>
         </Navbar.Brand>
-
         <Navbar.Collapse>
           <Navbar.Link>
             <Link to="/" className="text-2xl">
@@ -42,6 +41,16 @@ function NavbarComponent() {
           <Navbar.Link>
             <Link to="/combos" className="text-2xl">
               Combos
+            </Link>
+          </Navbar.Link>
+          <Navbar.Link>
+            <Link to="/equipos" className="text-2xl">
+              Equipos
+            </Link>
+          </Navbar.Link>
+          <Navbar.Link>
+            <Link to="/pagos" className="text-2xl">
+              Pagos
             </Link>
           </Navbar.Link>
           <Dropdown
