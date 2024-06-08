@@ -101,3 +101,8 @@ hr{
   margin: 20px;
 }
 
+.text-center{
+  text-align: center;
+  text-decoration: double;
+  margin-top: 10px;
+}

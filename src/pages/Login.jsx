@@ -3,8 +3,13 @@ import Section from "../components/Section";
 import React, { Children, useContext, useState } from "react";
 import axios from "axios";
 import { SesionDataContext } from "../../Context";
+import { useNavigate, Navigate } from "react-router-dom";
+const url = import.meta.env.VITE_API_URL;
 function Login() {
   const [sessiondata, Setsessiondata] = useContext(SesionDataContext);
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -20,16 +25,23 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    setMessage(""); // Limpiar el mensaje anterior
+
     axios
-      .post("http://localhost:8083/api/users/login", formData)
+      .post(url + "/users/login", formData)
       .then((res) => {
-        return res.data;
+        console.log(res.data);
+        Setsessiondata({ ...res.data });
+        console.log("Inicio de sesión exitoso");
+        console.log("sesion data:" + JSON.stringify(sessiondata));
+        navigate("/"); // Redirigir a la página principal
       })
-      .then((data) => {
-        Setsessiondata((session) => ({ ...data }));
-      })
-      .finally(console.log(sessiondata));
+      .catch((error) => {
+        console.error(error);
+        setMessage(
+          "Error en el inicio de sesión. Por favor, verifica tus credenciales."
+        );
+      });
   };
 
   return (
@@ -82,6 +94,9 @@ function Login() {
             >
               Entrar
             </button>
+            <div className="flex w-5/12 items-center justify-around bg-red-300">
+              {message && <p>{message}</p>}
+            </div>
           </div>
         </form>
       </div>
